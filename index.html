@@ -1,0 +1,223 @@
+<title>Axial Studios</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='80' height='80' rx='16' fill='%23090909'/%3E%3Cellipse cx='40' cy='40' rx='26' ry='10' stroke='%23C4A35A' stroke-width='3' fill='none' transform='rotate(-28 40 40)'/%3E%3Ctext x='40' y='54' text-anchor='middle' font-family='Arial Black,sans-serif' font-weight='900' font-size='40' fill='%23F0EDE8'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700&family=Big+Shoulders+Display:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap">
+
+<style>
+  :root {
+    --bg:         #090909;
+    --surface:    #111111;
+    --text:       #F0EDE8;
+    --text-mid:   #9A9590;
+    --text-dim:   #555250;
+    --accent:     #C4A35A;
+    --accent-dim: rgba(196,163,90,0.18);
+    --border:     #1E1E1E;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* ── Header ─────────────────────────────────────────── */
+  header {
+    padding: 36px 48px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo-mark {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+  }
+
+  .logo-wordmark {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text);
+  }
+
+  /* ── Hero ────────────────────────────────────────────── */
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 48px;
+  }
+
+  .hero {
+    max-width: 640px;
+    width: 100%;
+  }
+
+  .eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 32px;
+  }
+
+  h1 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 800;
+    font-size: clamp(64px, 11vw, 96px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    margin-bottom: 32px;
+  }
+
+  h1 em {
+    font-style: normal;
+    color: var(--accent);
+  }
+
+  .rule {
+    width: 40px;
+    height: 2px;
+    background: var(--accent);
+    margin-bottom: 28px;
+    border: none;
+  }
+
+  .about {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: var(--accent);
+    margin-bottom: 52px;
+    max-width: 520px;
+  }
+
+  .contact-label {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+
+  .contact-link {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-dim);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .contact-link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  /* ── Footer ──────────────────────────────────────────── */
+  footer {
+    padding: 24px 48px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .footer-copy {
+    font-family: 'Syne', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-variant-numeric: lining-nums;
+    font-feature-settings: "lnum" 1, "tnum" 1;
+  }
+
+  .footer-location {
+    font-family: 'Syne', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  /* ── Responsive ──────────────────────────────────────── */
+  @media (max-width: 600px) {
+    header  { padding: 24px 24px; }
+    main    { padding: 60px 24px; }
+    footer  { padding: 20px 24px; flex-direction: column; align-items: flex-start; gap: 6px; }
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg:         #F8F6F2;
+      --surface:    #FFFFFF;
+      --text:       #111111;
+      --text-mid:   #555250;
+      --text-dim:   #AAAAAA;
+      --accent:     #9A7A32;
+      --accent-dim: rgba(154,122,50,0.15);
+      --border:     #E8E5E0;
+    }
+  }
+
+  :root[data-theme="light"] {
+    --bg:         #F8F6F2;
+    --surface:    #FFFFFF;
+    --text:       #111111;
+    --text-mid:   #555250;
+    --text-dim:   #AAAAAA;
+    --accent:     #9A7A32;
+    --accent-dim: rgba(154,122,50,0.15);
+    --border:     #E8E5E0;
+  }
+</style>
+
+<header>
+  <span class="logo-wordmark">Axial Studios</span>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>We build apps<br>people <em>actually</em> want</h1>
+    <hr class="rule">
+    <p class="about">
+      Axial Studios is an independent mobile and web app studio based in Minnesota.
+      We design and build consumer apps focused on entertainment, creativity,
+      and personal growth. Our products are engineered for virality and utility from the start.
+    </p>
+    <p class="contact-label">Get in touch</p>
+    <a class="contact-link" href="mailto:hello@axialstudios.app">hello@axialstudios.app</a>
+  </div>
+</main>
+
+<footer>
+  <span class="footer-copy">© 202<span style="display:inline-block;font-size:0.97em;transform:translateY(0.01em)">6</span> Axial Studios LLC</span>
+  <span class="footer-location">Minneapolis, Minnesota</span>
+</footer>
